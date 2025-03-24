@@ -1,0 +1,59 @@
+/*Tyler Moon csd-340 03-22-25*/
+/* Set the HTML and body font size to 16px */
+html, body {
+    font-size: 16px;
+}
+
+/* Give the paragraph text a weight of 400 */
+p {
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+/* Give the h1 a weight of 700 */
+h1 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* Give the h2 a weight of 500 */
+h2 {
+    font-weight: 500;
+    text-align: left;
+    padding-top: 15px;
+}
+
+/* Give the address a text alignment of center */
+address {
+    text-align: center;
+}
+
+/* Make the website URL bold with a font-size of 1.25em, font color of #4F3674, and remove the underline */
+address a {
+    font-weight: bold;
+    font-size: 1.25em;
+    color: #4F3674;
+    text-decoration: none;
+}
+
+/* When a user hovers over the website link, apply an underline and give it a background color of #D6A800 */
+address a:hover {
+    text-decoration: underline;
+    background-color: #D6A800;
+}
+
+/* For the visited pseudo class, you can choose your own styling */
+address a:visited {
+    color: #7A5C99; /* Example color for visited links */
+}
+
+/* Apply a font-style of italic to the CSS sentence class */
+.sentence {
+    font-style: italic;
+}
+
+/* Give the CSS “intro” class a text-indent of 2em */
+.intro {
+    text-indent: 2em;
+}
