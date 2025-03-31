@@ -23,14 +23,14 @@ h1, h2, h3, h4 {
 }
 
 a {
-    color: #3498DB; /* Adjust to match your color scheme */
+    color: #3498DB; /* Adjust to match your color scheme if you change it*/
     text-decoration: none;
 }
 
 a:hover {
-    color: #2980B9; /* Adjust hover color */
+    color: #2C3E50; /* Adjust hover color to be darker */
 }
 
 a:visited {
-    color: #8E44AD; /* Adjust visited link color */
+    color: #8E44AD; /* Adjust visited link color if needed*/
 }
