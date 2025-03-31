@@ -1,0 +1,36 @@
+.roboto-custom {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; /* Replace with the desired weight, such as 400, 700, etc. */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    margin: 50px 100px 0 100px;
+}
+
+h1, h2, h3, h4 {
+    background-color: #2C3E50; /* Choose your preferred color */
+    color: #FFFFFF; /* Ensure contrast for readability */
+    border: 1px solid #D6A800;
+    padding: 10px;
+}
+
+a {
+    color: #3498DB; /* Adjust to match your color scheme */
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2980B9; /* Adjust hover color */
+}
+
+a:visited {
+    color: #8E44AD; /* Adjust visited link color */
+}
