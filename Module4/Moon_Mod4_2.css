@@ -1,0 +1,54 @@
+#image-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+/* Apply a thin border to each div */
+.gallery-item {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Center the h1 text */
+h1 {
+    text-align: center;
+    color: rgba(0, 128, 255, 0.9);
+}
+
+/* Center the h3 text */
+h3 {
+    text-align: center;
+    color: rgba(0, 200, 0, 0.85);
+}
+
+/* Center the image within its div */
+figure {
+    text-align: center;
+}
+
+/* Style figcaption text */
+figcaption {
+    font-style: italic;
+    font-size: 0.75em;
+    color: rgba(255, 0, 128, 0.85);
+}
+
+/* Ensure all images are the same size */
+.gallery-item img {
+    width: 200px; /* Set a consistent width */
+    height: 300px; /* Set a consistent height */
+    object-fit: cover; /* Images fit proportionally */
+}
+
+/* Position the bottom link in the bottom-right corner of the page */
+.bottom {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    text-align: right;
+}
