@@ -1,0 +1,97 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding */
+    text-align: center; /* Center the text */
+}
+
+/* Navbar */
+#navbar {
+    overflow: hidden; /* Prevent overflow */
+    background-color: #444; /* Background color */
+    border-bottom: solid 15px #666; /* Bottom border */
+    text-align: center;
+}
+
+/* Navbar Links */
+#navbar a {
+    display: inline-block; /* Display block */
+    color: white; /* Text color */
+    padding: 14px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Navbar Links Hover */
+#navbar a:hover {
+    background-color: #555; /* Change background color */
+    color: yellow; /* Change text color */
+}
+
+/* Container */
+#container {
+    margin-top: 2%; /* Top margin */
+    margin-left: 5%; /* Left margin */
+    margin-right: 5%; /* Right margin */
+    padding: 10px; /* Padding */
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: 0.3s; /* Transition */
+    width: 50%; /* Width */
+    margin: auto; /* Center the card */
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+    text-align: center; /* Center text */
+    font-size: 2em; /* Font size */
+    color: #222; /* Text color */
+    font-weight: 400; /* Set weight */
+}
+
+/* Card Content */
+.card-content {
+    padding: 2px 16px; /* Padding */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+/* Footer */
+footer {
+    background-color: #333; /* Match header color */
+    position: absolute; /* Absolute positioning */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+    text-align: right;
+    padding: 10px;
+}
+
+/* Footer Link */
+.footer-link {
+    color: white; /* Text color */
+    font-weight: 400; /* Set weight */
+    padding-right: 10px; /* Right padding */
+    font-style: italic; /* Italic text */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Footer Link Hover */
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
