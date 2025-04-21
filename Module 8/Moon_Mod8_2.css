@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #333; /* Background color */
+    color: white; /* Text color */
+    padding: 20px; /* Padding */
+    text-align: center; /* Center the text */
+}
+
+/* Navbar */
+#navbar {
+    overflow: hidden; /* Prevent overflow */
+    background-color: #444; /* Background color */
+    border-bottom: solid 15px #666; /* Bottom border */
+    text-align: center;
+}
+
+/* Navbar Links */
+#navbar a {
+    display: inline-block; /* Display block */
+    color: white; /* Text color */
+    padding: 14px 16px; /* Padding */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Navbar Links Hover */
+#navbar a:hover {
+    background-color: #555; /* Change background color */
+    color: yellow; /* Change text color */
+}
+
+/* Container */
+#container {
+    padding: 10px; /* Padding */
+    margin: 2% 5% 100px 5%;
+}
+
+/* Card */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+    transition: 0.3s; /* Transition */
+    width: 50%; /* Width */
+    margin: auto; /* Center the card */
+    background: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+    text-align: center; /* Center text */
+    font-size: 2em; /* Font size */
+    color: #222; /* Text color */
+    font-weight: 400; /* Set weight */
+}
+
+/* Card Content */
+.card-content {
+    padding: 2px 16px; /* Padding */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+footer {
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;             /* Flex layout */
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 10px;
+    font-style: italic;
+    left: 0;
+}
+
+.footer-left {
+    padding-left: 10px;
+}
+
+.footer-right {
+    padding-right: 10px;
+}
+
+.footer-link {
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+/* Table Styles */
+#movies {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+#movies th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #333;
+    color: white;
+    border: 1px solid #ddd;
+}
+
+
+#movies td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
