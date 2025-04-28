@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+<!--
+      Tyler Moon
+       Assignment 9.3
+-->
+<head>
+    <h1>Assignment 9.3: JavaScript - Part </h1>
+   <script>
+       var firstVariableValue = "Chihiro";
+       var secondVariableValue = "No-Face";
+       var thirdVariableValue = "Bathhouse";
+       var fourthVariableValue = "Spirits";
+   </script>
+</head>
+
+<body>
+   <p>Spirited Away</p>
+   <p>"You must be very tired, <span id="firstVariable">_________</span>. Youve come a long way. But I can take care of you. You can relax here at the <span id="thirdVariable">_________</span>."</p>
+   <p>"<span id="secondVariable">_________</span> is a spirit thats been hiding in the shadows."</p>
+   <p>"The <span id="fourthVariable">_________</span> have been preparing for something big."</p>
+
+   <p>
+       <button type="button"
+         onclick="document.getElementById('firstVariable').innerHTML = firstVariableValue">Chihiro</button>
+       <button type="button"
+         onclick="document.getElementById('secondVariable').innerHTML = secondVariableValue">No-Face</button>
+       <button type="button"
+         onclick="document.getElementById('thirdVariable').innerHTML = thirdVariableValue">Bathhouse</button>
+       <button type="button"
+         onclick="document.getElementById('fourthVariable').innerHTML = fourthVariableValue">Spirits</button>
+   </p>
+</body>
+</html>
+
+
+
