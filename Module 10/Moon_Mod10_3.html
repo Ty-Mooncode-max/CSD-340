@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Tyler Moon
+  CSD-340-Assignment 10.3
+-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSD 340 Web Development with HTML, CSS, and JavaScript!</title>
+  <script>
+    let rotationAngle = 0;
+
+    function rotateImage(imageId) {
+      rotationAngle += 45; // Rotate by 45 degrees
+      document.getElementById(imageId).style.transform = `rotate(${rotationAngle}deg)`;
+    }
+
+    function preventLink(event) {
+      event.preventDefault();
+    }
+
+    // Function to change the image source on hover
+    function handleImageHover(event, imageId, hoverIn) {
+      document.getElementById(imageId).src = hoverIn ? `${imageId}_01.png` : `${imageId}_02.png`;
+    }
+
+    // Function to change text color on hover
+    function handleTextHover(event) {
+      this.style.color = event.type === 'mouseover' ? 'red' : 'black';
+    }
+
+    // Event listener setup
+    window.onload = function() {
+      // Set up hover events for the first image (cave)
+      const caveImage = document.getElementById('cave');
+      caveImage.addEventListener('click', function() {
+        rotateImage('cave');
+      });
+      caveImage.parentElement.addEventListener('mouseover', function(event) {
+        handleImageHover(event, 'cave', true);
+      });
+      caveImage.parentElement.addEventListener('mouseout', function(event) {
+        handleImageHover(event, 'cave', false);
+      });
+
+      // Set up hover events for the second image (moon)
+      const moonImage = document.getElementById('moon');
+      moonImage.addEventListener('click', function() {
+        rotateImage('moon');
+      });
+      moonImage.parentElement.addEventListener('mouseover', function(event) {
+        handleImageHover(event, 'moon', true);
+      });
+      moonImage.parentElement.addEventListener('mouseout', function(event) {
+        handleImageHover(event, 'moon', false);
+      });
+
+      // Set up hover events for text
+      const paragraphs = document.querySelectorAll('p');
+      paragraphs.forEach(function(paragraph) {
+        paragraph.addEventListener('mouseover', handleTextHover);
+        paragraph.addEventListener('mouseout', handleTextHover);
+      });
+
+      // Prevent the default link behavior
+      const links = document.querySelectorAll('a');
+      links.forEach(function(link) {
+        link.addEventListener('click', preventLink);
+      });
+    };
+  </script>
+  <style>
+    img {
+      border: none;
+      transition: transform 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+  <h1>Assignment 10.3: JavaScript - Part 2</h1>
+
+  <!-- Image 1 -->
+  <div>
+    <a href="#">
+      <img id="cave" src="cave_02.png" alt="Cave Image">
+    </a>
+  </div>
+
+  <p>
+    Hover over the image to change.
+  </p>
+
+  <!-- Image 2 -->
+  <div>
+    <a href="#">
+      <img id="moon" src="moon_02.png" alt="Moon Image">
+    </a>
+  </div>
+
+  <p>
+    Hover over the image to change.<br>Click to rotate.
+  </p>
+
+</body>
+</html>
