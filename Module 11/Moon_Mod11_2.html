@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Moon_Mod11_2.css">
+</head>
+
+<body>
+
+    <h1>Assignment 11.2: JavaScript - Part 3</h1>
+    <h3>
+        This is an advanced interactive To-Do list. <br>
+        Type in an item and click add or press enter. <br>
+        Click display to view the list, and again to hide it. <br>
+        You can delete any item from the list, or you can remove your last entry. <br>
+        The List is expandable via clicking and dragging the bottom right corner.
+    </h3>
+
+    <label for="itemInput"></label><input type="text" placeholder="Add an Item:" id="itemInput">
+
+    <div class="button-group">
+        <button
+                class="flip-button"
+                onclick="addItem()"
+                data-front="Add Item"
+                style="--bg:
+                    url('Images/doIt.gif');"
+        >
+        </button>
+        <button
+                class="flip-button"
+                onclick="deleteLastItem()"
+                data-front="Delete Last"
+                style="--bg:
+                    url('Images/bmoDel.gif');"
+        >
+        </button>
+        <button
+                class="flip-button"
+                onclick="displayItems()"
+                data-front="Display"
+                style="--bg:
+                    url('Images/display.gif');"
+        >
+        </button>
+        <button
+                class="flip-button"
+                onclick="toggleAddAlerts()"
+                data-front="Toggle Add Alerts"
+                style="--bg:
+                    url('Images/toggle.gif');"
+        >
+        </button>
+</div>
+    <div class="items-wrapper">
+    <div id="items" style="display: none;"></div>
+</div>
+
+    <script src="Moon_Mod11_2.js"></script>
+</body>
+</html>

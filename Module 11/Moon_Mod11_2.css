@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 10px;
+  padding: 0;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+
+#itemInput {
+  width: 45%;
+  padding: 10px;
+
+}
+
+/* Button group layout */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Flip button */
+.flip-button {
+  position: relative;
+  width: 200px;
+  height: 60px;
+  background: transparent;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  display: inline-block;
+  z-index: 0;
+  margin-top: 16px;
+}
+
+/* Base styling for front and back faces of the flip button */
+.flip-button::before,
+.flip-button::after {
+  content: attr(data-front);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid black;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  box-sizing: border-box;
+  font-size: 1rem;
+  padding: 10px;
+  overflow: hidden;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+}
+
+/* Front face */
+.flip-button::before {
+  background: black;
+  transform: rotateX(0deg) translateZ(30px);
+}
+
+/* Back face */
+.flip-button::after {
+  content: '';
+  background-size: cover;
+  background-position: center;
+  transform: rotateX(90deg) translateZ(30px);
+  background-image: var(--bg);
+}
+
+/* Hover flip animation */
+.flip-button:hover::before {
+  transform: rotateX(-90deg) translateZ(30px);
+}
+
+.flip-button:hover::after {
+  transform: rotateX(0deg) translateZ(30px);
+}
+
+/* Focus outline */
+.flip-button:focus,
+.flip-button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.7);
+  z-index: 1;
+}
+
+
+/* Items container wrapper */
+.items-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 300px;
+  padding: 20px;
+}
+
+/* Items box */
+#items {
+  counter-reset: item; /* Resets CSS counter for numbered items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background-color: #f9f9f9;
+  width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  resize: both; /* Allows user to resize box */
+  max-width: 90vw;
+  min-height: 300px;
+  max-height: calc(100vh - 200px);
+  box-sizing: border-box;
+  min-width: 50vw;
+  justify-content: center;
+  text-align: left;
+}
+
+/* Individual item */
+#items > div {
+  counter-increment: item;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  word-break: break-word;
+  padding: 5px 10px;
+  text-align: left;
+}
+#items > div::before {
+  content: "Item " counter(item) ": ";
+  font-weight: bold;
+  margin-right: 6px;
+  display: inline-block;
+  min-width: 75px;
+}
+
+
+.buttonDel {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: auto;
+  min-width: 80px;
+  text-align: center;
+}
+.buttonDel:hover {
+  background-color: #333;
+}
