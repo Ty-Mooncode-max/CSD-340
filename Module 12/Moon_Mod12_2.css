@@ -1,0 +1,55 @@
+/* Centering the h1 title */
+h1 {
+    text-align: center;
+}
+
+/* Side-by-side divs */
+.content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.left, .right {
+    width: 45%;
+}
+
+/* Styling the last div */
+.bottom {
+    width: 100%;
+    margin-top: 60%;
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+
+/* Heading and list styling */
+h3 {
+    font-weight: 500;
+}
+
+/* List font weight */
+ol, ul {
+    font-weight: 300;
+}
+
+/* Ordered list styling */
+.left h3, .left ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: decimal inside; /* Keeps numbers inside the border */
+}
+
+/* Unordered list styling */
+.right h3, .right ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    padding: 10px;
+    list-style: upper-roman inside; /* Changes bullet points to upper-roman */
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}
